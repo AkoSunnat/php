@@ -14,10 +14,10 @@ $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE email LIKE '$email'";
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
 if ($data[3] == $email){
-    $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE pass LIKE '$pass'";
+    $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE pass LIKE '$password'";
     $res = mysqli_query($conn,$query);
     $data = mysqli_fetch_array($res);
-    echo $data[5];
+    //echo $data[5];
     if ($data[5] == $password){
         echo json_encode("true");
     }else{
