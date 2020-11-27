@@ -3,7 +3,6 @@
     $db = "1z9Eejw0qq";
     $user = "1z9Eejw0qq";
     $pass = "HCtbQ6v2nB";
-    $charset = "utf8mb4";
     $conn = new mysqli($host,$user,$pass);
     $query = "SELECT *FROM 1z9Eejw0qq.customer";
     $result = $conn->query($query);
