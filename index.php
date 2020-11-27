@@ -8,7 +8,6 @@
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    echo "Connected successfully";
     $email = $_POST["email"];
     $password = $_POST["password"];
     $first_name = $_POST["first_name"];
@@ -19,7 +18,7 @@
     $res = mysqli_query($conn,$query);
     $data = mysqli_fetch_array($res);
     echo $data[3];
-    if ($data[3]>1){
+    if ($data[3] == $email){
         echo json_encode("account already exists");
     }else{
         $query = "INSERT INTO 1z9Eejw0qq.customer(first_name,last_name,email,phone_number) VALUES ('$first_name','$last_name','$email','$phone_number')";
