@@ -8,8 +8,7 @@
     $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE email LIKE '$email'";
     $res = mysqli_query($conn,$query);
     $data = mysqli_fetch_array($res);
-    echo $email;
-    if ($data[3]>1){
+    if ($data[3]==$email){
         echo json_encode("account already exists");
     }else{
         $query = "INSERT INTO 1z9Eejw0qq.customer(first_name,last_name,email,phone_number,password) VALUES ('$first_name','$last_name','$email','$phone_number','$password')";
