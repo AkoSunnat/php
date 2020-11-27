@@ -6,7 +6,7 @@
     $charset = "utf8mb4";
     $conn = new mysqli($host,$user,$pass);
     $query = "SELECT *FROM 1z9Eejw0qq.customer";
-    $result = $conn->query($sql);
+    $result = $conn->query($query);
     echo "fuck\n";
     echo $result;
     if ($result->num_rows > 0) {
