@@ -4,13 +4,9 @@
     $user = "1z9Eejw0qq";
     $pass = "HCtbQ6v2nB";
     $conn = new mysqli($host,$user,$pass);
-    $query = "SELECT *FROM 1z9Eejw0qq.customer";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
-          echo "id: " . $row["id_customer"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-        }
       } else {
         echo "0 results\n";
       }
