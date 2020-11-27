@@ -17,13 +17,13 @@
     //echo $email;
     $res = mysqli_query($conn,$query);
     $data = mysqli_fetch_array($res);
-    echo $data[3];
+    //echo $data[3];
     if ($data[3] == $email){
         echo json_encode("account already exists");
     }else{
-        $query = "INSERT INTO 1z9Eejw0qq.customer(first_name,last_name,email,phone_number) VALUES ('$first_name','$last_name','$email','$phone_number')";
-        $res = mysqli_query($conn,$query);
-        if ($res){
+        $sql = "INSERT INTO 1z9Eejw0qq.customer(first_name,last_name,email,phone_number) VALUES ('$first_name','$last_name','$email','$phone_number')";
+        $result = mysqli_query($conn,$sql);
+        if ($result){
             echo json_encode("true");
         }else{
             echo json_encode("false");
