@@ -6,7 +6,6 @@
     $conn = new mysqli($host,$user,$pass);
     $query = "SELECT *FROM 1z9Eejw0qq.customer";
     $result = $conn->query($query);
-    echo "fuck\n";
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
@@ -18,6 +17,5 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    echo "Connected successfully";
     $conn->close();
 ?>
