@@ -6,9 +6,9 @@
     $last_name = $_POST["last_name"];
     $phone_number = $_POST["phone_number"];
     $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE email LIKE savrulloevsunnatjon@gmail.com";
+    echo $first_name;
     $res->$conn->query($query);
     $data = $res -> fetch_array(MYSQLI_NUM);
-    echo $first_name;
     if ($data[3]>1){
         echo json_encode("account already exists");
     }else{
