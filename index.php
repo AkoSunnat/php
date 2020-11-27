@@ -13,7 +13,7 @@
           echo "id: " . $row["id_customer"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
         }
       } else {
-        echo "0 results";
+        echo "0 results\n";
       }
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
