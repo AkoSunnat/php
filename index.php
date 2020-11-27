@@ -22,7 +22,7 @@
         echo json_encode("account already exists");
     }else{
         $query = "INSERT INTO 1z9Eejw0qq.customer(first_name,last_name,email,phone_number) VALUES ('$first_name','$last_name','$email','$phone_number')";
-        $res = mysqli_query($query);
+        $res = mysqli_query($conn,$query);
         if ($res){
             echo json_encode("true");
         }else{
