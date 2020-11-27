@@ -17,7 +17,7 @@
     //echo $email;
     $res = mysqli_query($conn,$query);
     $data = mysqli_fetch_array($res);
-    //echo $data[3];
+    echo $data[1];
     if ($data[3] == $email){
         echo json_encode("account already exists");
     }else{
