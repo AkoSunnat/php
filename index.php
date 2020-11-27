@@ -5,8 +5,9 @@
     $pass = "HCtbQ6v2nB";
     $charset = "utf8mb4";
     $conn = new mysqli($host,$user,$pass);
-    $query = "SELECT id_customer,first_name,last_name FROM 1z9Eejw0qq.customer";
+    $query = "SELECT *FROM 1z9Eejw0qq.customer";
     $result = $conn->query($sql);
+    echo $result->num_rows;
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
