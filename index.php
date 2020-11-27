@@ -7,7 +7,8 @@
     $conn = new mysqli($host,$user,$pass);
     $query = "SELECT *FROM 1z9Eejw0qq.customer";
     $result = $conn->query($sql);
-    echo $result->num_rows;
+    echo "fuck\n";
+    echo $result;
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
