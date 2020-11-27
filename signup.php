@@ -5,10 +5,10 @@
     $first_name = $_POST["first_name"];
     $last_name = $_POST["last_name"];
     $phone_number = $_POST["phone_number"];
-    $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE email LIKE '$email'";
+    $query = "SELECT *FROM 1z9Eejw0qq.customer WHERE email LIKE savrulloevsunnatjon@gmail.com";
     $res = mysqli_query($conn,$query);
     $data = mysqli_fetch_array($res);
-    if ($data[3]==$email){
+    if ($data[3]>1){
         echo json_encode("account already exists");
     }else{
         $query = "INSERT INTO 1z9Eejw0qq.customer(first_name,last_name,email,phone_number,password) VALUES ('$first_name','$last_name','$email','$phone_number','$password')";
