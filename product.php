@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 $jsonData = array();
 $query = "SELECT *FROM 1z9Eejw0qq.product";
 $res = $conn->query($query);
-while ($result = $res->fetch_row()){
+while ($result = $res->fetch_assoc()){
     $jsonData[]=$result;
 }
 echo json_encode($jsonData);
