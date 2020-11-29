@@ -10,7 +10,6 @@ if ($conn->connect_error) {
 }
 $query = "SELECT *FROM 1z9Eejw0qq.product";
 $res = $conn->query($query);
-while ($result = $res->fetch_assoc()){
-    echo json_encode($result);
-}
+$result = $res->fetch_assoc();
+echo json_encode($result);
 ?>
