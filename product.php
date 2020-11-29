@@ -8,8 +8,11 @@ $conn = new mysqli($host, $user, $pass);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$jsonData = array();
 $query = "SELECT *FROM 1z9Eejw0qq.product";
 $res = $conn->query($query);
-$result = $res->fetch_assoc();
-echo json_encode($result);
+while ($result = $res->fetch_row()){
+    $jsonData[]=$result;
+}
+echo json_encode($jsonData);
 ?>
