@@ -9,7 +9,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $query = "SELECT *FROM 1z9Eejw0qq.product";
-$res = $conn->query($query);
-$result = json_encode($res->fetch_assoc());
-echo $result;
+while ($res = $conn->query($query)){
+    $result = json_encode($res->fetch_assoc());
+    echo $result;
+}
 ?>
