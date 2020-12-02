@@ -14,7 +14,7 @@ $query = "SELECT *FROM 1z9Eejw0qq.delievery_man WHERE phone_number LIKE '$phone_
 //echo $email;
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
-if ($data[3] == $email){
+if ($data[3] == $phone_number){
     $sql = "DELETE FROM 1z9Eejw0qq.delievery_man WHERE phone_number = '$phone_number'";
     $result = mysqli_query($conn,$sql);
     if ($result){
