@@ -1,9 +1,5 @@
 <?php
-$host = "remotemysql.com";
-$db = "1z9Eejw0qq";
-$user = "1z9Eejw0qq";
-$pass = "HCtbQ6v2nB";
-$conn = new mysqli($host, $user, $pass);
+require_once("index.php");
 $name = $_POST["name"];
 $surname = $_POST["surname"];
 $phone_number = $_POST["phone_number"];
@@ -14,7 +10,7 @@ echo $surname;
 if ($data[3]==$phone_number){
     echo json_encode("account already exists");
 }else{
-    $query = "INSERT INTO 1z9Eejw0qq.delievery_man(name,surname,phone_number) VALUES ('$first_name','$last_name','$phone_number')";
+    $query = "INSERT INTO 1z9Eejw0qq.delievery_man(name,surname,phone_number) VALUES ('$name','$surname','$phone_number')";
     $res = mysqli_query($query);
     if ($res){
         echo json_encode("true");
