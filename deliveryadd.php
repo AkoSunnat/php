@@ -19,7 +19,7 @@ if ($data[3]==$phone_number){
     echo json_encode("account already exists");
 }else{
     $query = "INSERT INTO 1z9Eejw0qq.delievery_man(name,surname,phone_number) VALUES ('$name','$surname','$phone_number')";
-    $res = mysqli_query($query);
+    $res = mysqli_query($conn,$query);
     if ($res){
         echo json_encode("true");
     }else{
