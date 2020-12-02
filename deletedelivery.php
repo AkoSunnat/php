@@ -10,12 +10,12 @@ if (!$conn) {
 }
 
 $phone_number = $_POST["phone_number"];
-$query = "SELECT *FROM 1z9Eejw0qq.customer WHERE phone_number LIKE '$phone_number'";
+$query = "SELECT *FROM 1z9Eejw0qq.delievery_man WHERE phone_number LIKE '$phone_number'";
 //echo $email;
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
 if ($data[3] == $email){
-    $sql = "DELETE FROM 1z9Eejw0qq.customer WHERE phone_number = '$phone_number'";
+    $sql = "DELETE FROM 1z9Eejw0qq.delievery_man WHERE phone_number = '$phone_number'";
     $result = mysqli_query($conn,$sql);
     if ($result){
         echo json_encode("true");
