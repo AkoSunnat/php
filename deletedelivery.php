@@ -9,13 +9,13 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$phone_number = $_POST["phone_number"];
-$query = "SELECT *FROM 1z9Eejw0qq.delievery_man WHERE phone_number LIKE '$phone_number'";
+$delivery_phone_number = $_POST["delivery_phone_number"];
+$query = "SELECT *FROM 1z9Eejw0qq.delievery_man WHERE delivery_phone_number LIKE '$delivery_phone_number'";
 //echo $email;
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
-if ($data[3] == $phone_number){
-    $sql = "DELETE FROM 1z9Eejw0qq.delievery_man WHERE phone_number = '$phone_number'";
+if ($data[3] == $delivery_phone_number){
+    $sql = "DELETE FROM 1z9Eejw0qq.delievery_man WHERE delivery_phone_number = '$delivery_phone_number'";
     $result = mysqli_query($conn,$sql);
         mysqli_query($conn,"ALTER TABLE 1z9Eejw0qq.delievery_man AUTO_INCREMENT = 1");
     if ($result){
