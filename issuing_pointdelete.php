@@ -19,6 +19,7 @@ $data = mysqli_fetch_array($res);
 
 if ($data[3]==$house && $data[2]==$street && $data[1]==$city){
     $query = "DELETE FROM 1z9Eejw0qq.issueing_point WHERE city LIKE '$city' AND street LIKE '$street' AND house LIKE '$house'";
+    mysqli_query($conn,"ALTER TABLE 1z9Eejw0qq.issueing_point AUTO_INCREMENT = 1");
     $res = mysqli_query($conn,$query);
     if ($res){
         echo json_encode("true");
