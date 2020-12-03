@@ -21,6 +21,7 @@ if ($data[3]==$house && $data[2]==$street && $data[1]==$city){
 }else{
     $query = "INSERT INTO 1z9Eejw0qq.issueing_point(city,street,house) VALUES ('$city','$street','$house')";
     $res = mysqli_query($conn,$query);
+    mysqli_query($conn,"ALTER TABLE 1z9Eejw0qq.issueing_point AUTO_INCREMENT = 1");
     if ($res){
         echo json_encode("true");
     }else{
