@@ -11,7 +11,7 @@ $data = mysqli_fetch_array($res);
 if ($data[1]>1){
     echo json_encode("account already exists");
 }else{
-    $query = "INSERT INTO 1z9Eejw0qq.category(cat_name) VALUES ('$name')";
+    $query = "INSERT INTO 1z9Eejw0qq.category(cat_name) VALUES ('$name');ALTER TABLE 1z9Eejw0qq.category AUTO_INCREMENT = 1";
     $res = mysqli_query($conn,$query);
     if ($res){
         echo json_encode("true");
