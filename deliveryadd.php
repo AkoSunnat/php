@@ -10,15 +10,15 @@ if (!$conn) {
 }
 $name = $_POST["name"];
 $surname = $_POST["surname"];
-$phone_number = $_POST["phone_number"];
-$query = "SELECT *FROM 1z9Eejw0qq.delievery_man WHERE phone_number LIKE '$phone_number'";
+$delivery_phone_number = $_POST["delivery_phone_number"];
+$query = "SELECT *FROM 1z9Eejw0qq.delievery_man WHERE delivery_phone_number LIKE '$delivery_phone_number'";
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
 echo $surname;
-if ($data[3]==$phone_number){
+if ($data[3]==$delivery_phone_number){
     echo json_encode("account already exists");
 }else{
-    $query = "INSERT INTO 1z9Eejw0qq.delievery_man(name,surname,phone_number) VALUES ('$name','$surname','$phone_number')";
+    $query = "INSERT INTO 1z9Eejw0qq.delievery_man(name,surname,phone_number) VALUES ('$name','$surname','$delivery_phone_number')";
     $res = mysqli_query($conn,$query);
     mysqli_query($conn,"ALTER TABLE 1z9Eejw0qq.delievery_man AUTO_INCREMENT = 1");
     if ($res){
