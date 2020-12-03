@@ -15,8 +15,9 @@ $query = "SELECT *FROM 1z9Eejw0qq.category WHERE cat_name LIKE '$name'";
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
 if ($data[1] == $name){
-    $sql = "DELETE FROM 1z9Eejw0qq.category WHERE cat_name = '$name';ALTER TABLE 1z9Eejw0qq.category AUTO_INCREMENT = 1";
+    $sql = "DELETE FROM 1z9Eejw0qq.category WHERE cat_name = '$name'";
     $result = mysqli_query($conn,$sql);
+    mysqli_query($conn,"ALTER TABLE 1z9Eejw0qq.category AUTO_INCREMENT = 1");
     if ($result){
         echo json_encode("true");
     }else{
