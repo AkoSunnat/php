@@ -9,13 +9,13 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$phone_number = $_POST["name"];
+$name = $_POST["name"];
 $query = "SELECT *FROM 1z9Eejw0qq.category WHERE name LIKE '$name'";
 //echo $email;
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
-if ($data[1] == $email){
-    $sql = "DELETE FROM 1z9Eejw0qq.category WHERE name = '$phone_number'";
+if ($data[1] == $name){
+    $sql = "DELETE FROM 1z9Eejw0qq.category WHERE name = '$name'";
     $result = mysqli_query($conn,$sql);
     if ($result){
         echo json_encode("true");
