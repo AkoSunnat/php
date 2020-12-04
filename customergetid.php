@@ -15,7 +15,7 @@ $query = "SELECT 1z9Eejw0qq.customer.id_customer FROM 1z9Eejw0qq.customer WHERE 
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
 if($data[0]>=1){
-    echo json_encode($data[0]);
+    echo $data[0];
 }else{
     echo json_encode("false_customer");
 }
