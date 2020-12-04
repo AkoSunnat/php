@@ -12,7 +12,7 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 
 $query = "SELECT 1z9Eejw0qq.customer.id_customer FROM 1z9Eejw0qq.customer WHERE 1z9Eejw0qq.customer.email LIKE '$email' AND 1z9Eejw0qq.customer.password LIKE '$password'";
-
+echo $email;
 $res = mysqli_query($conn,$query);
 $data = mysqli_fetch_array($res);
 if($data[0]>1){
