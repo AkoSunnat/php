@@ -14,9 +14,8 @@ if ($res){
     $r = mysqli_query($conn,$q);
     $data = mysqli_fetch_array($r);
     if ($r){
-        echo "shit im order";
-        echo json_encode($data[0]);
-    }
+        echo $data[0];
+    } 
 }else{
     echo json_encode("false");
 }
