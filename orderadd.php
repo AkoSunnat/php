@@ -10,6 +10,7 @@ $r = null;
 $query = "INSERT INTO 1z9Eejw0qq.order(product_id,numofproducts) VALUES ($product_id,'$numofproducts')";
 $q = "SELECT 1z9Eejw0qq.order.id_order FROM 1z9Eejw0qq.order WHERE 1z9Eejw0qq.order.product_id LIKE '$product_id' AND 1z9Eejw0qq.order.numofproducts LIKE '$numofproducts'";
 $res = mysqli_query($conn,$query);
+echo "order here";
 if ($res){
     $r = mysqli_query($conn,$q);
     $data = mysqli_fetch_array($res);
