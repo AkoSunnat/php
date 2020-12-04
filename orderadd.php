@@ -12,7 +12,7 @@ $q = "SELECT 1z9Eejw0qq.order.id_order FROM 1z9Eejw0qq.order WHERE 1z9Eejw0qq.or
 $res = mysqli_query($conn,$query);
 if ($res){
     $r = mysqli_query($conn,$q);
-    $data = mysqli_fetch_array($res);
+    $data = mysqli_fetch_array($r);
     if ($r){
         echo "shit im order";
         echo json_encode($data[0]);
